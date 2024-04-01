@@ -18,6 +18,8 @@ export async function getToys(req, res) {
         logger.debug('Getting Toys', filterBy, sortBy)
         const toys = await toyService.query(filterBy, sortBy)
         res.json(toys)
+        console.log("🚀 ~ file: toy.controller.js:26 ~ getToys ~ toys:", toys)
+
 
     } catch (err) {
         logger.error('Failed to get toys', err)
